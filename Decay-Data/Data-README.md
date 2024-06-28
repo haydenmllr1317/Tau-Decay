@@ -33,7 +33,7 @@ This file has 1726 events at seemingly nominal upsilon mass. Might contain vecto
 Data Set File Name:
 CUT_nomMass_from_Otto.root
 Looked At?:
-No
+Gavin looking at now
 Info:
 This file has around 1000 nominal upsilon mass events. Might contain vectors rotated into desired frame which would be labeled as "toUse".
 //
