@@ -10,13 +10,13 @@ import uproot
 
 
 # Path to your ROOT file
-filepath = '/isilon/export/home/hdmiller/Tau-Decay/Decay-Data/cartesian_upsilon_taus_GENSIM_withBP_10.root'
+filepath = '/isilon/export/home/hdmiller/Tau-Decay/Decay-Data/CUT_nomMass_total_JanIdea.root'
 
 # Open the ROOT file
-# with uproot.open(filepath) as file:
+with uproot.open(filepath) as file:
 #     # List all keys in the ROOT file
-#     keys = file.keys()
-#     print(keys)
+    keys = file.keys()
+    print(keys)
 
 def main(datapath, savepath, datatype_taup, datatype_taum, datatype_pi, filetype):
     # TODO: should we actually care about this warning? 
@@ -56,8 +56,10 @@ def load_root(filepath):
         events = NanoEventsFactory.from_root(filepath, treepath = "tree", schemaclass = PFNanoAODSchema).events()
         # everything_there = NanoEventsFactory.from_root(filepath, treepath = "tree", schemaclass = PFNanoAODSchema)
         # all_keys = everything_there.schema.all_keys()
-        # the_tree = NanoEventsFactory.from_root(filepath, schemaclass = PFNanoAODSchema).tree
+        # the_tree = NanoEventsFactory.from_root(filepath, treepath = "tree", schemaclass = PFNanoAODSchema)
         # all_keys = the_tree.all_keys()
+        # print(all_keys)
+        print(dir(events))
         print(len(events))
 
         # random_indices = np.random.choice(len(events), size=200, replace=False)
@@ -115,7 +117,9 @@ def process_event_root(events):
     # fields = dir(events)
     # print("Available fields:", fields)
     # Available fields: ['Mask', '__class__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__get__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__self__', '__self_class__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__thisclass__', '_behavior', '_caches', '_layout', '_numbaview', 'add_kind', 'add_systematic', 'antineutrino', 'behavior', 'caches', 'candMatchPi1Info', 'candMatchPi2Info', 'check', 'check1', 'check2', 'describe_variations', 'explodes_how', 'fields', 'initial', 'layout', 'local', 'mask', 'metadata', 'nbytes', 'ndim', 'neutrino', 'numba_type', 'orig', 'pi', 'slot0', 'slot1', 'slot2', 'slot3', 'slot4', 'slot5', 'slot6', 'slot7', 'slot8', 'slot9', 'systematics', 'taum', 'taup', 'toUse', 'to_list', 'to_numpy', 'tolist', 'type', 'upsilon']
-
+`   
+    toUse = events.toUse
+    print(dir(toUse))
     taup = events.taup
     taum = events.taum
     pi = events.pi
@@ -157,4 +161,4 @@ def process_event_root(events):
 
 
 print("run began okay")
-main(filepath, "/isilon/export/home/hdmiller/Tau-Decay/Pickled-Data", "15GeV_BP10_taup_data", "15GeV_BP10_taum_data", "15GeV_BP10_pis_data", ".root")
+main(filepath, "/isilon/export/home/hdmiller/Tau-Decay/Pickled-Data", "nomMass_JanIdea_taup", "nomMass_JanIdea_taum", "nomMass_JanIdea_pis", ".root")
