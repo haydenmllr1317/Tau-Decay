@@ -4,12 +4,12 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
-pkl_taup = '/Users/gavinpitt/Desktop/taup_file.pkl'
-pkl_taum = '/Users/gavinpitt/Desktop/taum_file.pkl'
-pkl_pi = '/Users/gavinpitt/Desktop/pi_file.pkl'
-pkl_neutrino = '/Users/gavinpitt/Desktop/neutrino_file.pkl'
-pkl_antineutrino = '/Users/gavinpitt/Desktop/antineutrino_file.pkl'
-pkl_upsilon = '/Users/gavinpitt/Desktop/upsilon_file.pkl'
+pkl_taup = '/Users/gavinpitt/Desktop/data pickles/taup_file.pkl'
+pkl_taum = '/Users/gavinpitt/Desktop/data pickles/taum_file.pkl'
+pkl_pi = '/Users/gavinpitt/Desktop/data pickles/pi_file.pkl'
+pkl_neutrino = '/Users/gavinpitt/Desktop/data pickles/neutrino_file.pkl'
+pkl_antineutrino = '/Users/gavinpitt/Desktop/data pickles/antineutrino_file.pkl'
+pkl_upsilon = '/Users/gavinpitt/Desktop/data pickles/upsilon_file.pkl'
 
 df_taup = pd.read_pickle(pkl_taup)
 df_taum = pd.read_pickle(pkl_taum)
@@ -122,18 +122,16 @@ range_max = 180
 hist1 = histogram1d(pi_inv, bins=bins, range=[range_min, range_max])
 hist2 = histogram1d(pi_neutrino_inv, bins=bins, range=[range_min, range_max])
 hist3 = histogram1d(tau_inv, bins=bins, range=[range_min, range_max])
+hist4 = histogram1d(upsilon_inv, bins=bins, range=[range_min, range_max])
 
 # Create bin edges
 bin_edges = np.linspace(range_min, range_max, bins + 1)
 
 # Plotting the histogram
 plt.figure(figsize=(10, 6))
-plt.bar(bin_edges[:-1], hist1, width=np.diff(bin_edges), edgecolor='black')
-plt.bar(bin_edges[:-1], hist2, width=np.diff(bin_edges), edgecolor='red')
-plt.bar(bin_edges[:-1], hist3, width=np.diff(bin_edges), edgecolor='blue')
-plt.title('Invariant Mass of Lepton Decays w/o Neutrino Momentum')
+plt.bar(bin_edges[:-1], hist4, width=np.diff(bin_edges), edgecolor='blue')
+plt.title('Invariant Mass of Upsilon')
 plt.xlabel('Invariant Mass')
 plt.ylabel('Frequency')
 plt.show()
 
-print(df_taup)
