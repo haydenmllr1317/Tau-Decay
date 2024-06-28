@@ -1,9 +1,18 @@
 THIS FILE EXPLAIN EACH DATASET IN DECAY-DATA FOLDER
 //
 Data Set File Name:
+Tau-Decay/Decay-Data/FOM_Studies_genApproach_30May2020_total.root
+Looked At?:
+Yes
+Info:
+Likely same data as other sets, 2612 decays at nominal mass. Contained information that allowed us to work in the Upsilon rest frame, and thus reconstruct invariant mass of the combined tau leptons.
+//
+Data Set File Name:
 CUT_15GeVMass_JanIdea.root
 Looked At?:
 Yes, Gavin had some success here?
+Success here with reconstruction data in the tau refereance frames, however could not to for upsilon masses since some data was 
+put in as -99.
 Info:
 This file has 4300+ events with the “upsilon” mass is set to 15 GeV. All the pions have been rotated into the desired frame and you can access that information via the toUse branches.
 //
