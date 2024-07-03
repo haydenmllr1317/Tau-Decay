@@ -1,5 +1,5 @@
 THIS FILE EXPLAIN EACH DATASET IN DECAY-DATA FOLDER
-//
+// RECO (WARNING: SAME DATA AS CUT_START_Upsilon_nomMass_Total_5May2020.root below)
 Data Set File Name:
 Tau-Decay/Decay-Data/FOM_Studies_genApproach_30May2020_total.root
 Looked At?:
@@ -15,14 +15,14 @@ Success here with reconstruction data in the tau refereance frames, however coul
 put in as -99.
 Info:
 This file has 4300+ events with the “upsilon” mass is set to 15 GeV. All the pions have been rotated into the desired frame and you can access that information via the toUse branches.
-//
+//  RECO (WARNING: SAME DATA AS FOM_Studies_genApproach_30May2020_total.root ABOVE)
 Data Set File Name:
 CUT_START_Upsilon_nomMass_Total_5May2020.root
 Looked At?:
 This is the original set of data we looked at (many variations, highlighted in docs).
 Info:
 This file has 2612 events with (we believe, given the title), nominal "upsilon" mass. Neutral pions in the decay have been excluded.
-//
+// RECO
 Data Set File Name:
 CUT_nomMass_total_JanIdea.root
 Looked At?:
@@ -62,3 +62,10 @@ Looked At?:
 No
 Info:
 This is a flat file with 15GeV upsilons with no neutral pions, it contains roughly 2600 events. I would check that this is different data from the other data with 2600 events. There is no evidence that they are similar, the numbers are just the same so worth checking.
+// RECO
+Data Set File Name:
+CUT_miniaod_0p35piPiCut.root
+Looked At?:
+No
+Info:
+Mary suggests this is RECO. Should have just over 1000 events. Not sure if neutral pions where cut. Probably?
