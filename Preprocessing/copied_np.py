@@ -61,13 +61,16 @@ def load_root(filepath):
         elif properties != -1: 
             for i, prop in enumerate(properties): 
                 data[property_names[i]].append(prop)
-            
+
     return pd.DataFrame.from_dict(data)
+            
+
 
 
 def process_event_root(events):
     
     fields = dir(events)
+
  
     available_columns = ['antineutrino', 'neutrino', 'pi', 'taum', 'taup', 'upsilon']
     
@@ -109,6 +112,5 @@ def process_event_root(events):
 
 
 print("run began okay")
-main(filepath, '/Users/gavinpitt/Desktop/data pickles', "toUse_file_2", ".root")
+main(filepath, '/Users/gavinpitt/Desktop/data pickles', "JanIdea", ".root")
     
-['Mask', 'SFx', 'SFy', 'SFz', '__class__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__get__', '__getattribute__', '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__self__', '__self_class__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__thisclass__', '_behavior', '_caches', '_layout', '_numbaview', 'add_kind', 'add_systematic', 'antineutrino', 'antitau', 'behavior', 'caches', 'check', 'check1', 'check2', 'describe_variations', 'diff', 'explodes_how', 'fields', 'initial', 'layout', 'local', 'mask', 'metadata', 'naive', 'nbytes', 'ndim', 'neutrino', 'numba_type', 'orig', 'pi', 'slot0', 'slot1', 'slot2', 'slot3', 'slot4', 'slot5', 'slot6', 'slot7', 'slot8', 'slot9', 'systematics', 'tau', 'taum', 'taup', 'toUse', 'to_list', 'to_numpy', 'tolist', 'true', 'type', 'upsilon', 'vis']

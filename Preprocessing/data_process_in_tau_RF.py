@@ -20,10 +20,12 @@ df_antineutrino = pd.read_pickle(pkl_antineutrino)
 df_upsilon = pd.read_pickle(pkl_upsilon)
 df_tau = pd.read_pickle(pkl_tau)
 """
-pkl_toUse = '/Users/gavinpitt/Desktop/data pickles/toUse_file_2.pkl'
+pkl_toUse = '/Users/gavinpitt/Desktop/data pickles/toUse_file_otto.pkl'
 
 df_toUse = pd.read_pickle(pkl_toUse)
+pkl_otto_taup  = pd.read_pickle('/Users/gavinpitt/Desktop/data pickles/toUse_file_otto_taup.pkl')
 
+print(df_toUse)
 ['local_taup_lv_mass','local_pi_p_lv1_phi', 'local_neu_lv_pt', 'local_pi_p_lv1_pt','local_pi_p_lv2_pt', 'local_pi_p_lv3_pt', 
 'local_neu_lv_theta', 'local_pi_p_lv1_theta', 'local_pi_p_lv2_theta', 'local_pi_p_lv3_theta', 'local_pi_p_lv2_phi', 
 'local_pi_p_lv3_phi','local_neu_lv_phi']
@@ -153,40 +155,40 @@ plt.bar(bin_edges[:-1], hist1, width=np.diff(bin_edges), edgecolor='black')
 plt.title('Invariant Mass (squared) of Antitau Decay Products')
 plt.xlabel('Invariant Mass (squared GeV)')
 plt.ylabel('Frequency')
-#plt.savefig('antitau_decay_sep.png')
-plt.show()
+plt.savefig('antitau_decay_sep_otto.png')
+#plt.show()
 
 plt.figure(figsize=(10, 6))
 plt.bar(bin_edges[:-1], hist2, width=np.diff(bin_edges), edgecolor='black')
 plt.title('Invariant Mass (squared) of Tau Decay Products')
 plt.xlabel('Invariant Mass (squared GeV)')
 plt.ylabel('Frequency')
-#plt.savefig('tau_decay_sep.png')
-plt.show()
+plt.savefig('tau_decay_sep_otto.png')
+#plt.show()
 
 plt.figure(figsize=(10, 6))
 plt.bar(bin_edges[:-1], hist3, width=np.diff(bin_edges), edgecolor='black')
 plt.title('Invariant Mass (squared) of Tau')
 plt.xlabel('Invariant Mass (squared GeV)')
 plt.ylabel('Frequency')
-#plt.savefig('tau_sep.png')
-plt.show()
+plt.savefig('tau_sep_otto.png')
+#plt.show()
 
 plt.figure(figsize=(10, 6))
 plt.bar(bin_edges[:-1], hist4, width=np.diff(bin_edges), edgecolor='black')
 plt.title('Invariant Mass (squared) of Antitau')
 plt.xlabel('Invariant Mass (squared GeV)')
 plt.ylabel('Frequency')
-#plt.savefig('antitau_sep.png')
-plt.show()
+plt.savefig('antitau_sep_otto.png')
+#plt.show()
 
 plt.figure(figsize=(10, 6))
 plt.bar(bin_edges[:-1], hist5, width=np.diff(bin_edges), edgecolor='black')
 plt.title('Invariant Mass (squared) of Antitau Decay Products w/o Antineutrino')
 plt.xlabel('Invariant Mass (squared GeV)')
 plt.ylabel('Frequency')
-#plt.savefig('sep_no_anti.png')
-plt.show()
+plt.savefig('sep_no_anti_otto.png')
+#plt.show()
 
 
 plt.figure(figsize=(10, 6))
@@ -194,8 +196,8 @@ plt.bar(bin_edges[:-1], hist6, width=np.diff(bin_edges), edgecolor='black')
 plt.title('Invariant Mass (squared) of Tau Decay Products w/o Neutrino')
 plt.xlabel('Invariant Mass (squared GeV)')
 plt.ylabel('Frequency')
-#plt.savefig('sep_no_neutrino.png')
-plt.show()
+plt.savefig('sep_no_neutrino_otto.png')
+#plt.show()
 """
 
 def convert_lists(df):

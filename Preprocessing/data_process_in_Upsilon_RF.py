@@ -4,6 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
+"""
 pkl_taup = '/Users/gavinpitt/Desktop/data pickles/taup_file.pkl'
 pkl_taum = '/Users/gavinpitt/Desktop/data pickles/taum_file.pkl'
 pkl_pi = '/Users/gavinpitt/Desktop/data pickles/pi_file.pkl'
@@ -11,12 +12,27 @@ pkl_neutrino = '/Users/gavinpitt/Desktop/data pickles/neutrino_file.pkl'
 pkl_antineutrino = '/Users/gavinpitt/Desktop/data pickles/antineutrino_file.pkl'
 pkl_upsilon = '/Users/gavinpitt/Desktop/data pickles/upsilon_file.pkl'
 
+pkl_antineutrino_otto = '/Users/gavinpitt/Desktop/data pickles/"antineutrino_otto".pkl'
+pkl_neutrino_otto = '/Users/gavinpitt/Desktop/data pickles/"antineutrino_otto".pkl'
+pkl_pi_otto = '/Users/gavinpitt/Desktop/data pickles/"antineutrino_otto".pkl'
+pkl_upsilon_otto = '/Users/gavinpitt/Desktop/data pickles/"antineutrino_otto".pkl'
+pkl_antineutrino_otto = '/Users/gavinpitt/Desktop/data pickles/"antineutrino_otto".pkl'
+pkl_antineutrino_otto = '/Users/gavinpitt/Desktop/data pickles/"antineutrino_otto".pkl'
+pkl_antineutrino_otto = '/Users/gavinpitt/Desktop/data pickles/"antineutrino_otto".pkl'
+
+
 df_taup = pd.read_pickle(pkl_taup)
 df_taum = pd.read_pickle(pkl_taum)
 df_pi = pd.read_pickle(pkl_pi)
 df_neutrino = pd.read_pickle(pkl_neutrino)
 df_antineutrino = pd.read_pickle(pkl_antineutrino)
 df_upsilon = pd.read_pickle(pkl_upsilon)
+"""
+
+pkl_JanIdea = '/Users/gavinpitt/Desktop/data pickles/JanIdea.pkl'
+df_JanIdea = pd.read_pickle(pkl_JanIdea)
+
+print(df_JanIdea.columns)
 
 def convert_lists(df):
     for column in df.keys():
@@ -32,6 +48,7 @@ def create_momentums(df):
     return df
 
 
+"""
 df_taup = convert_lists(df_taup)
 df_taum = convert_lists(df_taum)
 df_pi = convert_lists(df_pi)
@@ -134,4 +151,5 @@ plt.title('Invariant Mass of Upsilon')
 plt.xlabel('Invariant Mass')
 plt.ylabel('Frequency')
 plt.show()
+"""
 
